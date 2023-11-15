@@ -65,32 +65,6 @@
     <div class="pop_up">
         <button class="close_x"><i class="fa-light fa-x"></i></button>
         <article id="proyecto1">
-            <div class="slide">
-                <div class="slide-inner">
-                    <input class="slide-open" type="radio" id="slide-1" 
-                          name="slide" aria-hidden="true" hidden="" checked="checked">
-                    <div class="slide-item">
-                        <img src="https://cdna.artstation.com/p/assets/images/images/040/937/772/4k/evgeny-romanov-4.jpg?1630321960">
-                    </div>
-                    <input class="slide-open" type="radio" id="slide-2" 
-                          name="slide" aria-hidden="true" hidden="">
-                    <div class="slide-item">
-                        <img src="https://cdnb.artstation.com/p/assets/images/images/040/937/765/4k/evgeny-romanov-2.jpg?1630321949">
-                    </div>
-                    <input class="slide-open" type="radio" id="slide-3" 
-                          name="slide" aria-hidden="true" hidden="">
-                    <div class="slide-item">
-                        <img src="https://cdna.artstation.com/p/assets/images/images/040/937/762/4k/evgeny-romanov-1.jpg?1630321944">
-                    </div>
-                    <label for="slide-3" class="slide-control prev control-1">‹</label>
-                    <label for="slide-2" class="slide-control next control-1">›</label>
-                    <label for="slide-1" class="slide-control prev control-2">‹</label>
-                    <label for="slide-3" class="slide-control next control-2">›</label>
-                    <label for="slide-2" class="slide-control prev control-3">‹</label>
-                    <label for="slide-1" class="slide-control next control-3">›</label>
-                   
-                </div>
-            </div>
         </article>
         <article id="proyecto2">
         </article>
@@ -281,34 +255,58 @@
                 desactivarProyecto()
                 proyecto1.style.display="flex"
                 pop_up.classList.add("active")
+                chimbo(proyecto1,
+                'https://images.pexels.com/photos/15835031/pexels-photo-15835031/free-photo-of-nieve-ciudad-coches-carretera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/13063591/pexels-photo-13063591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/18963992/pexels-photo-18963992/free-photo-of-ciudad-calle-paso-de-peatones-urbano.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
             })
 
             car2.addEventListener("click",()=>{
                 desactivarProyecto()
                 proyecto2.style.display="flex"
                 pop_up.classList.add("active")
+                chimbo(proyecto2,
+                'https://images.pexels.com/photos/18820159/pexels-photo-18820159/free-photo-of-nieve-madera-amanecer-paisaje.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/12360591/pexels-photo-12360591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/18906748/pexels-photo-18906748/free-photo-of-ligero-amanecer-paisaje-puesta-de-sol.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
             })
 
             car3.addEventListener("click",()=>{
                 desactivarProyecto()
                 proyecto3.style.display="flex"
                 pop_up.classList.add("active")
+                chimbo(proyecto3,
+                'https://images.pexels.com/photos/15835031/pexels-photo-15835031/free-photo-of-nieve-ciudad-coches-carretera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/13063591/pexels-photo-13063591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/18963992/pexels-photo-18963992/free-photo-of-ciudad-calle-paso-de-peatones-urbano.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
             })
 
             car4.addEventListener("click",()=>{
                 desactivarProyecto()
                 proyecto4.style.display="flex"
                 pop_up.classList.add("active")
+                chimbo(proyecto4,
+                'https://images.pexels.com/photos/15835031/pexels-photo-15835031/free-photo-of-nieve-ciudad-coches-carretera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/13063591/pexels-photo-13063591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/18963992/pexels-photo-18963992/free-photo-of-ciudad-calle-paso-de-peatones-urbano.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
             })
 
             car5.addEventListener("click",()=>{
                 desactivarProyecto()
                 proyecto5.style.display="flex"
                 pop_up.classList.add("active")
+                chimbo(proyecto5,
+                'https://images.pexels.com/photos/15835031/pexels-photo-15835031/free-photo-of-nieve-ciudad-coches-carretera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/13063591/pexels-photo-13063591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/18963992/pexels-photo-18963992/free-photo-of-ciudad-calle-paso-de-peatones-urbano.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
             })
 
             close_x.addEventListener("click",()=>{
                 pop_up.classList.remove("active")
+                let slide=document.querySelector(".slide")
+                setTimeout(() => {
+                    slide.classList.remove('open')
+                }, 800);
             })
 
             function desactivarProyecto() {
@@ -317,6 +315,39 @@
                 proyecto3.style.display="none"
                 proyecto4.style.display="none"
                 proyecto5.style.display="none"
+            }
+
+            function chimbo(myProject,link1,link2,link3){
+                proyecto1.innerHTML=''
+                proyecto2.innerHTML=''
+                proyecto3.innerHTML=''
+                proyecto4.innerHTML=''
+                proyecto5.innerHTML=''
+                myProject.innerHTML=`
+                <div class="slide">
+                    <div class="slide-inner">
+                        <input class="slide-open" type="radio" id="slide-1" 
+                            name="slide" aria-hidden="true" hidden="" checked="checked">
+                        <div class="slide-item">
+                            <img src="${link1}">
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-2" 
+                            name="slide" aria-hidden="true" hidden="">
+                        <div class="slide-item">
+                            <img src="${link2}">
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-3" 
+                            name="slide" aria-hidden="true" hidden="">
+                        <div class="slide-item">
+                            <img src="${link3}">
+                        </div>
+                        <label for="slide-3" class="slide-control prev control-1">‹</label>
+                        <label for="slide-2" class="slide-control next control-1">›</label>
+                        <label for="slide-1" class="slide-control prev control-2">‹</label>\
+                    </div>
+                </div>`
+            let slide=document.querySelector(".slide")
+                slide.classList.add('open')
             }
         </script>
     </footer>
