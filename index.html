@@ -256,7 +256,7 @@
                 desactivarProyecto()
                 proyecto1.style.display="flex"
                 pop_up.classList.add("active")
-                chimbo(proyecto1,
+                awesomeFunction('s1',proyecto1,
                 'https://cdna.artstation.com/p/assets/images/images/068/771/154/4k/jonjo-hemmens-lighters.jpg?1698621695',
                 'https://cdna.artstation.com/p/assets/images/images/068/796/620/4k/jonjo-hemmens-radiator.jpg?1698679508',
                 'https://cdnb.artstation.com/p/assets/images/images/068/771/105/4k/jonjo-hemmens-furniture-01.jpg?1698621604')
@@ -266,7 +266,7 @@
                 desactivarProyecto()
                 proyecto2.style.display="flex"
                 pop_up.classList.add("active")
-                chimbo(proyecto2,
+                awesomeFunction('s2',proyecto2,
                 'https://cdna.artstation.com/p/assets/images/images/069/471/462/large/nina-shaw-screenshot006.jpg?1700214836',
                 'https://cdna.artstation.com/p/assets/images/images/069/471/450/large/nina-shaw-screenshot002.jpg?1700214817',
                 'https://cdna.artstation.com/p/assets/images/images/069/471/454/large/nina-shaw-screenshot003.jpg?1700214821')
@@ -276,7 +276,7 @@
                 desactivarProyecto()
                 proyecto3.style.display="flex"
                 pop_up.classList.add("active")
-                chimbo(proyecto3,
+                awesomeFunction('s3',proyecto3,
                 'https://cdna.artstation.com/p/assets/images/images/069/440/494/large/jaume-mateo-2render.jpg?1700138082',
                 'https://cdnb.artstation.com/p/assets/images/images/069/440/185/large/jaume-mateo-1render.jpg?1700137492',
                 'https://cdna.artstation.com/p/assets/images/images/069/440/442/large/jaume-mateo-3render.jpg?1700138016')
@@ -286,7 +286,7 @@
                 desactivarProyecto()
                 proyecto4.style.display="flex"
                 pop_up.classList.add("active")
-                chimbo(proyecto4,
+                awesomeFunction('s4',proyecto4,
                 'https://cdnb.artstation.com/p/assets/images/images/044/092/471/large/poly-feelings-bojji-photo7.jpg?1639064843',
                 'https://cdnb.artstation.com/p/assets/images/images/044/091/955/large/poly-feelings-bojji4.jpg?1639063995',
                 'https://cdnb.artstation.com/p/assets/images/images/044/092/457/large/poly-feelings-bojji5.jpg?1639064817')
@@ -296,7 +296,7 @@
                 desactivarProyecto()
                 proyecto5.style.display="flex"
                 pop_up.classList.add("active")
-                chimbo(proyecto5,
+                awesomeFunction('s5',proyecto5,
                 'https://cdna.artstation.com/p/assets/images/images/047/668/514/large/innowise-crazytrainproshoes-render.jpg?1648139980',
                 'https://cdnb.artstation.com/p/assets/images/images/047/668/519/large/innowise-crazytrainproshoes-render2.jpg?1648140069',
                 'https://cdna.artstation.com/p/assets/images/images/047/668/526/large/innowise-ultraboost-uncaged-schuh-render.jpg?1648139996')
@@ -318,36 +318,37 @@
                 proyecto5.style.display="none"
             }
 
-            function chimbo(myProject,link1,link2,link3){
-                proyecto1.innerHTML=''
-                proyecto2.innerHTML=''
-                proyecto3.innerHTML=''
-                proyecto4.innerHTML=''
-                proyecto5.innerHTML=''
+            function awesomeFunction(preid,myProject,link1,link2,link3){
+                console.log(link1);
+                console.log(link2);
+                console.log(link3);
                 myProject.innerHTML=`
                 <div class="slide">
                     <div class="slide-inner">
-                        <input class="slide-open" type="radio" id="slide-1" 
-                            name="slide" aria-hidden="true" hidden="" checked="checked">
+                        <input class="slide-open" type="radio" id="${preid}-slide-1" name="slide" aria-hidden="true"  checked="checked">
                         <div class="slide-item">
                             <img src="${link1}">
                         </div>
-                        <input class="slide-open" type="radio" id="slide-2" 
-                            name="slide" aria-hidden="true" hidden="">
+                        <input class="slide-open" type="radio" id="${preid}-slide-2" name="slide" aria-hidden="true" >
                         <div class="slide-item">
                             <img src="${link2}">
                         </div>
-                        <input class="slide-open" type="radio" id="slide-3" 
-                            name="slide" aria-hidden="true" hidden="">
+                        <input class="slide-open" type="radio" id="${preid}-slide-3" name="slide" aria-hidden="true" >
                         <div class="slide-item">
                             <img src="${link3}">
                         </div>
-                        <label for="slide-3" class="slide-control prev control-1">‹</label>
-                        <label for="slide-2" class="slide-control next control-1">›</label>
-                        <label for="slide-1" class="slide-control prev control-2">‹</label>\
+                        <label for="${preid}-slide-3" class="slide-control prev control-1">‹</label>
+                        <label for="${preid}-slide-2" class="slide-control next control-2">›</label>
+                        <label for="${preid}-slide-1" class="slide-control prev control-3">‹</label>
+                        <label for="${preid}-slide-3" class="slide-control next control-4">›</label>
+                        <label for="${preid}-slide-2" class="slide-control prev control-5">‹</label>
+                        <label for="${preid}-slide-1" class="slide-control next control-6">›</label>
                     </div>
                 </div>`
-            let slide=document.querySelector(".slide")
+                console.log(link1);
+                console.log(link2);
+                console.log(link3);
+                let slide=document.querySelector(".slide")
                 slide.classList.add('open')
             }
         </script>
