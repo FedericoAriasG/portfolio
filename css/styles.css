@@ -241,19 +241,25 @@ footer div.social ul li a:hover{
 
 
 
-
+.close_x{
+    z-index: 2;
+}
 .slide {
     position: relative;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
 }
 .slide.open{
-    margin-top: 200px;
+    height: 100vh;
 }
 .slide-inner {
+    margin-top: 20vh;
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 600px;
+    height: 80vh;
+}
+.slide-open{
+    display: none;
 }
 .slide-open:checked + .slide-item {
     position: static;
@@ -261,15 +267,20 @@ footer div.social ul li a:hover{
 }
 .slide-item {
     position: absolute;
+    left: 0;
+    bottom: 0;
     opacity: 0;
     -webkit-transition: opacity 0.6s ease-out;
     transition: opacity 0.6s ease-out;
+    pointer-events: none;
 }
 .slide-item img {
+
     display: block;
-    height: auto;
-    width: 100vw;
-    max-width: 100vw;
+    height: 80vh;
+    width: 100vw;  
+    object-fit: cover;
+    object-position: center;
 }
 .slide-control {
     border-radius: 50%;
@@ -287,26 +298,46 @@ footer div.social ul li a:hover{
     transform: translate(0, -50%);
     text-align: center;
     width: 40px;
-    z-index: 10;
 }
 .slide-control.prev {
-    left: 2%;
+    left: 4%;
 }
 .slide-control.next {
-    right: 2%;
+    right: 4%;
 }
 .slide-control:hover {
     color: gray;
 }
-#slide-1:checked ~ .control-1,
-#slide-2:checked ~ .control-2,
-#slide-3:checked ~ .control-3,
-#slide-1:checked ~ .control-4,
-#slide-2:checked ~ .control-5,
-#slide-3:checked ~ .control-6,
-#slide-1:checked ~ .control-7,
-#slide-2:checked ~ .control-8,
-#slide-3:checked ~ .control-9 {
+#s1-slide-1:checked ~ .control-1,
+#s1-slide-1:checked ~ .control-2,
+#s1-slide-2:checked ~ .control-3,
+#s1-slide-2:checked ~ .control-4,
+#s1-slide-3:checked ~ .control-5,
+#s1-slide-3:checked ~ .control-6,
+#s2-slide-1:checked ~ .control-1,
+#s2-slide-1:checked ~ .control-2,
+#s2-slide-2:checked ~ .control-3,
+#s2-slide-2:checked ~ .control-4,
+#s2-slide-3:checked ~ .control-5,
+#s2-slide-3:checked ~ .control-6,
+#s3-slide-1:checked ~ .control-1,
+#s3-slide-1:checked ~ .control-2,
+#s3-slide-2:checked ~ .control-3,
+#s3-slide-2:checked ~ .control-4,
+#s3-slide-3:checked ~ .control-5,
+#s3-slide-3:checked ~ .control-6,
+#s4-slide-1:checked ~ .control-1,
+#s4-slide-1:checked ~ .control-2,
+#s4-slide-2:checked ~ .control-3,
+#s4-slide-2:checked ~ .control-4,
+#s4-slide-3:checked ~ .control-5,
+#s4-slide-3:checked ~ .control-6,
+#s5-slide-1:checked ~ .control-1,
+#s5-slide-1:checked ~ .control-2,
+#s5-slide-2:checked ~ .control-3,
+#s5-slide-2:checked ~ .control-4,
+#s5-slide-3:checked ~ .control-5,
+#s5-slide-3:checked ~ .control-6{
     display: block;
 }
 
